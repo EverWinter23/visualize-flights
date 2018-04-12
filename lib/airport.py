@@ -15,8 +15,7 @@ class Airport:
     IATA 	    3-letter IATA code. Null if not assigned/unknown.
     ICAO 	    4-letter ICAO code. Null if not assigned.
     """
-    def __init__(self, id, name, city, country, lat, lng, alt=0, IATA=None, ICAO=None):
-        self.id = id
+    def __init__(self, name, city, country, lat, lng, alt=0, IATA=None, ICAO=None):
         self.name = name
         self.city = city
         self.country = country
@@ -27,7 +26,6 @@ class Airport:
         self.ICAO = ICAO
 
     def __repr__(self):        
-        print("Airport ID       {}".format(self.id))
         print("Name             {}".format(self.name))
         print("City             {}".format(self.city))
         print("Country          {}".format(self.country))
@@ -38,7 +36,7 @@ class Airport:
         print("ICAO             {}".format(self.ICAO))
         return ""
     
-        def cal_dist_from(self, loc):
+    def cal_dist_from(self, loc):
         """
         Calculates the distance from this airport to the other airport in kilometers.
         """
