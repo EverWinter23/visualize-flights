@@ -11,7 +11,7 @@ class Airport:
     country 	Country or territory where airport is located. See countries.dat to cross-reference to ISO 3166-1 codes.
     lat  	    Decimal degrees, usually to six significant digits. Negative is South, positive is North.
     lng      	Decimal degrees, usually to six significant digits. Negative is West, positive is East.
-    alt 	    In kilometer. 0 if not assigned
+    alt 	    In kilometers. 0 if not assigned
     IATA 	    3-letter IATA code. Null if not assigned/unknown.
     ICAO 	    4-letter ICAO code. Null if not assigned.
     """
