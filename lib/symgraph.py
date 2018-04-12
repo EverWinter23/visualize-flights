@@ -9,7 +9,7 @@ class SymbolGraph:
     air_dat         array of airport objects, accessed using index
     key             inverted index, index->airport_name          
     """
-    def __init__(fname, delim):
+    def __init__(airports_dat_file, routes_dat_file, delim):
         # construct index = dictionary> airport_name:index
         sym_tab_IATA = {}
         sym_tab_ICAO = {}
@@ -42,14 +42,14 @@ class SymbolGraph:
                 # don't add if both IATA and ICAO are None
             
         # construct inverted index for IATA code
-        key_iata = [0 for index in range(len(sym_tab_IATA))]
-        for iata in sym_tab_IATA.keys():
-            key_iata[sym_tab[iata]] = iata
+        key_iata = [0 for index in range(len(air_dat))]
+        for index in sym_tab_IATA.keys():
+            key_iata[sym_tab[index]] = index
 
         # construct inverted index for ICAO code
-        key_icao = [0 for index in range(len(sym_tab_ICAO))]
-        for icao in sym_tab_ICAO.keys()
-            key_icao[sym_tab_ICAO[icao]] = icao
+        key_icao = [0 for index in range(len(air_dat))]
+        for index in sym_tab_ICAO.keys()
+            key_icao[sym_tab_ICAO[index]] = index
 
         graph = Graph(len(sym_tab))
         with open(fname as )
